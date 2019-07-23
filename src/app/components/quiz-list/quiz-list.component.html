@@ -1,0 +1,7 @@
+<div class="container">
+  <div class="row">
+    <div class="col-3" *ngFor="let quiz of quizzes$ | async">
+      <app-quiz-card [quiz]="quiz"></app-quiz-card>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,36 @@
+<mat-card class="example-card">
+  <mat-card-header>
+    <div
+      mat-card-avatar
+      [style.backgroundImage]="'url(' + quiz.iconUrl + ')'"
+    ></div>
+    <mat-card-title>{{ quiz.title }}</mat-card-title>
+    <mat-card-subtitle>{{ quiz.category }}</mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-content>
+    <h4>Description:</h4>
+    <p>
+      {{ quiz.description }}
+    </p>
+    <div class="property">
+      <h4>Number of Questions:</h4>
+      <span>{{ quiz.questions.length }}</span>
+    </div>
+    <div class="property">
+      <h4>Difficulty:</h4>
+      <span>{{ quiz.difficulty }}</span>
+    </div>
+    <h4>Completion:</h4>
+    <p>
+      <mat-progress-bar mode="determinate" value="40"></mat-progress-bar>
+    </p>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-button>
+      <mat-icon>star</mat-icon>
+      <span>FAVORITE</span>
+    </button>
+    <div class="spacer"></div>
+    <button mat-button>START</button>
+  </mat-card-actions>
+</mat-card>

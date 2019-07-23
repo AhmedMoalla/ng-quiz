@@ -1,18 +1,40 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { BrowserModule } from "@angular/platform-browser";
+import { NgModule } from "@angular/core";
 
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
+import { AppRoutingModule } from "./app-routing.module";
+import { AppComponent } from "./app.component";
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
+import { TopNavbarComponent } from "./components/top-navbar/top-navbar.component";
+import { MatToolbarModule, MatButtonModule, MatRippleModule, MatIconModule, MatMenuModule, MatCardModule, MatProgressBarModule, MatTooltipModule, MatFormFieldModule, MatInputModule, MatSelectModule, MatTabsModule, MatCheckboxModule } from "@angular/material";
+import { QuizCardComponent } from './components/quiz-card/quiz-card.component';
+import { QuizListComponent } from './components/quiz-list/quiz-list.component';
+import { QuizFormComponent } from './components/quiz-form/quiz-form.component';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
+  declarations: [AppComponent, TopNavbarComponent, QuizCardComponent, QuizListComponent, QuizFormComponent],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    FormsModule,
+    ReactiveFormsModule,
+
+    MatToolbarModule,
+    MatButtonModule,
+    MatRippleModule,
+    MatIconModule,
+    MatMenuModule,
+    MatCardModule,
+    MatProgressBarModule,
+    MatTooltipModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatSelectModule,
+    MatTabsModule,
+    MatCheckboxModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}

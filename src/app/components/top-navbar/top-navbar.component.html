@@ -1,0 +1,48 @@
+<mat-toolbar color="primary" class="mat-elevation-z6">
+  <div class="container">
+    <div class="row title">
+      <div class="col">
+        <span>Ng-Quiz</span>
+      </div>
+      <div class="col">
+        <a mat-button routerLink="quizzes">
+          <mat-icon>help_outline</mat-icon>
+          <span>All Quizzes</span>
+        </a>
+        <a mat-button routerLink="create-quiz">
+          <mat-icon>add_circle_outline</mat-icon>
+          <span>Create</span>
+        </a>
+      </div>
+      <div class="spacer"></div>
+      <div class="col">
+        <a mat-button>
+          <mat-icon>star</mat-icon>
+          <span>Favorites</span>
+        </a>
+        <a mat-button [matMenuTriggerFor]="menu">
+          <mat-icon>person</mat-icon>
+          <span>Ahmed Moalla</span>
+          <mat-icon>arrow_drop_down</mat-icon>
+        </a>
+      </div>
+    </div>
+  </div>
+</mat-toolbar>
+<mat-menu #menu="matMenu">
+  <button mat-menu-item>
+    <mat-icon>person</mat-icon>
+    <span>Profile</span>
+  </button>
+  <button mat-menu-item>
+    <mat-icon>help</mat-icon>
+    <span>My Quizzes</span>
+  </button>
+  <button mat-menu-item>
+    <mat-icon color="warn">power_settings_new</mat-icon>
+    <span>Logout</span>
+  </button>
+</mat-menu>
+<div class="title-bar container">
+  {{ title$ | async }}
+</div>

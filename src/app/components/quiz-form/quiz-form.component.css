@@ -1,0 +1,51 @@
+.container {
+    width: 80%;
+}
+
+textarea {
+    resize: none !important;
+}
+
+.questions {
+    border: 1px solid #e1e1e1;
+    border-radius: 4px;
+}
+
+.questions mat-form-field {
+    width: 100%;
+}
+
+.questions > .questions-title {
+    color: rgba(0,0,0,.6);
+    padding: 8px 10px;
+    display: flex;
+    align-items: center;
+}
+
+.answers {
+    padding-left: 30px;
+}
+
+.answers button {
+    width: 100%;
+    margin-top: 5px;
+}
+
+.question-container {
+    padding: 10px;
+}
+
+.answers .answer mat-form-field ::ng-deep .mat-form-field-wrapper,
+.question-container mat-form-field ::ng-deep .mat-form-field-wrapper {
+    padding: 0;
+}
+
+[mat-raised-button] {
+    float: right;
+    margin-top: 10px;
+}
+
+.answers-wrapper {
+    max-height: 270px;
+    overflow-y: scroll;
+}

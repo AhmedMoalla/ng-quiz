@@ -1,0 +1,6 @@
+.main-container {
+    background-color: white;
+    padding: 25px 0;
+    height: calc(100% - 56px - 80px - 50px);
+    overflow-y: scroll;
+}

@@ -1,0 +1,24 @@
+[mat-card-avatar] {
+    background-size: contain;
+}
+
+.property {
+    display: flex; 
+    align-items: center;
+}
+
+.property > span {
+    margin-left: 10px;
+}
+
+h4 {
+    margin: 8px 0;
+}
+
+mat-card-actions {
+    display: flex;
+}
+
+mat-card-actions button:first-child mat-icon {
+    color: #f1ca31;
+}

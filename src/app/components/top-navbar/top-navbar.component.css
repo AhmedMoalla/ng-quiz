@@ -1,0 +1,22 @@
+.title {
+  display: flex;
+  align-items: center;
+}
+
+.spacer {
+  flex: 1 auto;
+}
+
+mat-toolbar {
+  height: 56px;
+}
+
+.title-bar {
+    height: 80px;
+    color: white;
+    font-size: 20px;
+    font-weight: 300;
+    display: flex;
+    align-items: center;
+    width: 80%;
+}

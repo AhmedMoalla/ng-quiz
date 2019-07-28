@@ -50,7 +50,11 @@
               </button>
             </div>
             <mat-tab-group [selectedIndex]="activeQuestionIndex">
-              <mat-tab *ngFor="let questionFormGroup of rootForm.controls.questions.controls; let i = index" [label]="'Question ' + (i + 1)">
+              <mat-tab *ngFor="let questionFormGroup of rootForm.controls.questions.controls; let i = index">
+                <ng-template mat-tab-label>
+                  Question {{ i + 1 }} &nbsp; 
+                  <mat-icon color="warn" (click)="onRemoveQuestionClick(rootForm.controls.questions, i)" matTooltip="Remove question" matTooltipPosition="above">close</mat-icon>
+                </ng-template>
                 <div class="question-container" [formGroup]="questionFormGroup">
                   <mat-form-field appearance="outline">
                     <mat-label>Question</mat-label>
@@ -60,6 +64,9 @@
                   <div class="answers">
                     <div class="answers-wrapper">
                       <div class="answer" *ngFor="let answerFormGroup of questionFormGroup.controls.answers.controls; let j = index" [formGroup]="answerFormGroup">
+                        <a mat-icon-button matTooltip="Remove answer" matTooltipPosition="above" (click)="onRemoveAnswerClick(questionFormGroup.controls.answers, j)">
+                          <mat-icon color="warn">close</mat-icon>
+                        </a>
                         <mat-form-field appearance="outline">
                           <mat-label>Answer {{ j + 1 }}</mat-label>
                           <input matInput required formControlName="answer"/>

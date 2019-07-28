@@ -22,10 +22,6 @@ textarea {
     align-items: center;
 }
 
-.answers {
-    padding-left: 30px;
-}
-
 .answers button {
     width: 100%;
     margin-top: 5px;
@@ -48,4 +44,13 @@ textarea {
 .answers-wrapper {
     max-height: 270px;
     overflow-y: scroll;
+}
+
+.answer {
+    display: flex;
+    align-items: center;
+}
+
+.answer a {
+    margin-right: 7px;
 }
